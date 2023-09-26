@@ -1,6 +1,14 @@
 #include "sort.h"
+
 /**
+ * set_pivot_position - function
  *
+ * @array: array
+ * @i: i
+ * @idx: idx
+ * @size: size
+ *
+ * Return: size_t
  */
 size_t set_pivot_position(int *array, size_t i, size_t idx, size_t size)
 {
@@ -39,8 +47,8 @@ void quick_sort(int *array, size_t size)
 
 	if (size > 0)
 	{
-	pos = set_pivot_position(array, i, idx, size);
-	quick_sort(array, &array[pos + 1] - array + 1);
-	quick_sort(&array[pos + 1], size - 1 - pos);
+		pos = set_pivot_position(array, i, idx, size);
+		quick_sort(array, &array[pos + 1] - array + 1);
+		quick_sort(&array[pos + 1], size - 1 - pos);
 	}
 }

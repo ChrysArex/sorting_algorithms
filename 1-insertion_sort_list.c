@@ -11,7 +11,7 @@ void insertion_sort_list(listint_t **list)
 	int swap = 0;
 	listint_t *previous, *rev_curser, *curser, *following;
 
-	for (curser = *list ; curser; curser = following)
+	for (curser = *list; curser; curser = following)
 	{
 		following = curser->next;
 		if (!following)
